@@ -1,0 +1,1 @@
+# Rezolvare-ecuatii-diferentiale
