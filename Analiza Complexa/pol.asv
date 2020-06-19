@@ -1,0 +1,22 @@
+function Y = pol(F)
+    %returneaza o matrice de n x 2 (prima coloana e polul, a doua coloana e
+    %ordinea polului
+    syms real
+    [~, d] = numden(F);
+    disp("Extragem numitorul si rezolvam ecuatia numitorului");
+    syms x
+    fprintf("Vrem sa rezolvam ecuatia %s = 0\n", d(x));
+    fprintf("Matlab imi rezolva automat, asadar trebuie sa rezolvi singur\n");
+    syms x
+    sol = solve(d == 0, x);
+    [e,~] = size(sol);
+    j = 1;
+    fprintf("Polii gasiti in intervalul sunt:\n");
+    syms t
+    for i=1:e
+        t = sol(i);
+                 fprintf("pol(%d) = %s\n", i, simplify(sol(i)));
+                 Y(i, :) = [simplify(sol(i)) get_order(F, simplify(sol(i)))];
+        
+    end 
+end
