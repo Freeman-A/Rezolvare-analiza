@@ -1,1 +1,1 @@
-# Rezolvare-ecuatii-diferentiale
+# Rezolvare analiza 
